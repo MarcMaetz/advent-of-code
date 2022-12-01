@@ -18,6 +18,8 @@ def main():
             elves.append([])
     sums = [sum(elve) for elve in elves]
     print(max(sums))
+    sums.sort()
+    print(sum(sums[-3:]))
 
 
 
