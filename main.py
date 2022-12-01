@@ -9,22 +9,15 @@ def main():
     with open('input.txt') as f:
         lines = [line.rstrip() for line in f]
 
-    print(lines)
-    calories = []
+    elves = [[]]
     for i in lines:
         try:
             e = int(i)
-            calories.append(e)
+            elves[-1].append(e)
         except:
-            calories.append(-1)
-    print(calories)
-    elves = [[]]
-    for i in calories:
-        if i < 0:
             elves.append([])
-        else:
-            elves[-1].append(i)
-    print(elves)
+    sums = [sum(elve) for elve in elves]
+    print(max(sums))
 
 
 
